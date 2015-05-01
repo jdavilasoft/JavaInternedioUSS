@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Bean;
 
 /**
@@ -11,10 +10,13 @@ package Bean;
  * @author Alumno
  */
 public class BeanUsuario extends BeanPersonal {
+
     private Integer userCodigo;
     private String userLogin;
     private String userEstado;
-   
+    private BeanPersonal personal;
+    private BeanSucursal sucursal;
+    private String contrasenia;
 
     public Integer getUserCodigo() {
         return userCodigo;
@@ -40,9 +42,28 @@ public class BeanUsuario extends BeanPersonal {
         this.userEstado = userEstado;
     }
 
-    
-    
-    
-    
-    
+    public BeanPersonal getPersonal() {
+        return personal;
+    }
+
+    public void setPersonal(BeanPersonal personal) {
+        this.personal = personal;
+    }
+
+    public BeanSucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(BeanSucursal sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
 }
