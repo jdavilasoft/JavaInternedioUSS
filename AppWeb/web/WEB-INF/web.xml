@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    <servlet>
-        <servlet-name>SvrCliente</servlet-name>
-        <servlet-class>Servlet.SvrCliente</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SvrArchivo</servlet-name>
-        <servlet-class>Servlet.SvrArchivo</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>reporteJava</servlet-name>
-        <servlet-class>Servlet.reporteJava</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SvrCliente</servlet-name>
-        <url-pattern>/registrarCliente.cl</url-pattern>
-        <url-pattern>/eliminarCliente.cl</url-pattern>
-        <url-pattern>/listarCliente.cl</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SvrArchivo</servlet-name>
-        <url-pattern>/subirArchivo.cl</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>reporteJava</servlet-name>
-        <url-pattern>/reporteJava.html</url-pattern>
-    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    <login-config>
-        <auth-method>BASIC</auth-method>
-    </login-config>
 </web-app>
