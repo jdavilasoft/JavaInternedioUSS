@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>SvrUsuario</servlet-name>
+        <servlet-class>servlet.SvrUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvrPersonal</servlet-name>
+        <servlet-class>servlet.SvrPersonal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvrUsuario</servlet-name>
+        <url-pattern>/logueo.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvrPersonal</servlet-name>
+        <url-pattern>/regPersonal.html</url-pattern>
+        <url-pattern>/listarPersonal.html</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
