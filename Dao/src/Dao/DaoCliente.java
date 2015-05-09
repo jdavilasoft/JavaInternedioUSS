@@ -1,12 +1,11 @@
 package Dao;
 
-import AccesoDatos.Conexion;
 import Bean.BeanCliente;
 import java.sql.ResultSet;
 
 public class DaoCliente {
 
-    DaoConexion dConexion=new DaoConexion();
+    DaoConexion dConexion = new DaoConexion();
 
     public void ingresarClienteForma1(
             String nomCliente, String ApellidoCliente, String celular,
@@ -49,20 +48,20 @@ public class DaoCliente {
         return 1; //Para Cliente Eliminado
     }
 
- public ResultSet listarCliente() throws Exception {//Devuleve todas las filas
+    public ResultSet listarCliente() throws Exception {//Devuleve todas las filas
         dConexion.conn.Conectar();
         ResultSet rs;
         rs = dConexion.conn.ejecutarListas("select codcli, nomcli, apecli, celcli, codsuc from cliente order by codcli asc");
         return rs;
     }
- 
+
     public ResultSet buscarCliente(int cod) throws Exception {//Devuelve una fila
         dConexion.conn.Conectar();
         ResultSet rs;
         rs = dConexion.conn.ejecutarListas("select codcli, nomcli, apecli, tipocli,dnicli  from cliente where codcli=" + cod);
         return rs;
     }
- 
+
     public ResultSet buscarCliente(String pApellido) throws Exception {
         dConexion.conn.Conectar();
         ResultSet rs;
