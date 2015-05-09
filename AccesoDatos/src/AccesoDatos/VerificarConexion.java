@@ -6,7 +6,7 @@ public class VerificarConexion {
 
 
     public static void main(String[] args) throws Exception {
-        Conexion conn=new Conexion("org.postgresql.Driver","jdbc:postgresql://","127.0.0.1","5432","java","postgres","123456");
+        Conexion conn=new Conexion("org.postgresql.Driver","jdbc:postgresql://","127.0.0.1","5432","javaintermedio","postgres","123456");
          System.out.println(conn.Conectar());
       
 //      conn.ejecutarActualizacion("INSERT INTO colegio( nombre, fechacreacion)" +
